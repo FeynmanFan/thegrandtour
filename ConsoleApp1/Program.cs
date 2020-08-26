@@ -49,7 +49,9 @@ namespace ConsoleApp1
 
         private static void PayForProduct(Product product)
         {
-            Console.WriteLine($"Pay for {product.Name}: {product.Price}");
+            Console.WriteLine($"Pay for {product.Name}: {product.Price}\n" +
+                product.SalesTax + "\n" + product.TotalPrice);
+
         }
     }
 }
