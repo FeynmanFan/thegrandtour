@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.Design;
 
 namespace ConsoleApp1
 {
@@ -6,6 +8,13 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            /* Allow the user to construct the list of products
+             * DisplayMenu
+             * GetUserSelection
+             *  Loop until user selects "Checkout"
+             * Loop through list of selected products
+             * Print total*/
+
             Product iceCream = new Product
             {
                 Name = "Ice Cream",
@@ -20,8 +29,55 @@ namespace ConsoleApp1
                 SpaceInBasket = 2
             };
 
-            Buy(iceCream);
-            Buy(frozenYogurt);
+            List<Product> productList = new List<Product>();
+
+            string userSelection;
+
+            do
+            {
+                DisplayMenu();
+
+                userSelection = Console.ReadLine();
+
+                if (userSelection == "IC")
+                {
+                    // add ice cream to the list
+                    productList.Add(iceCream);
+                }
+
+                if (userSelection == "FY")
+                {
+                    // add frozen yogurt to the list
+                    productList.Add(frozenYogurt);
+                }
+            } while (userSelection != "CO");
+
+            Checkout(productList);
+        }
+
+        private static void DisplayMenu()
+        {
+            Console.WriteLine("Ice Cream: Enter IC");
+            Console.WriteLine("Frozen Yogurt: Enter FY");
+            Console.WriteLine("Enter CO to check out when you're done.");
+            Console.Write("Enter selection:");
+        }
+
+        private static void Checkout(List<Product> productList)
+        {
+            foreach(var product in productList)
+            {
+                Buy(product);
+            }
+
+            var totalPrice = 0m;
+
+            for(var i = 0; i < productList.Count; i++)
+            {
+                totalPrice += productList[i].TotalPrice;
+            }
+
+            Console.WriteLine($"Total price: {totalPrice.ToString("C")}");
         }
 
         static void Buy(Product product)
@@ -51,7 +107,6 @@ namespace ConsoleApp1
         {
             Console.WriteLine($"Pay for {product.Name}: {product.Price}\n" +
                 product.SalesTax + "\n" + product.TotalPrice);
-
         }
     }
 }
