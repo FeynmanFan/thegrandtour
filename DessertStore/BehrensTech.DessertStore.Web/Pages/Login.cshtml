@@ -1,0 +1,37 @@
+﻿@page
+@model BehrensTech.DessertStore.Web.Pages.LoginModel
+@{
+}
+<form method="post">
+    <table>
+        <tr>
+            <td>
+                <label asp-for="FirstName">FirstName</label>
+            </td>
+            <td>
+                <input asp-for="FirstName" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="UserName">UserName</label>
+            </td>
+            <td>
+                <input asp-for="UserName" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="Password">Password</label>
+            </td>
+            <td>
+                <input asp-for="Password" type="password" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input id="submit" type="submit" value="Login" />
+            </td>
+        </tr>
+    </table>
+</form>
