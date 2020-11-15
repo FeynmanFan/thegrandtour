@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BehrensTech.DessertStore.Web", "BehrensTech.DessertStore.Web.csproj", "{9B70600D-9C71-4C8C-91FC-F3E6623F02C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BehrensTech.DessertStore.Web.Tests", "..\BehrensTech.DessertStore.Web.Tests\BehrensTech.DessertStore.Web.Tests.csproj", "{45624FDE-6701-47A4-875A-AA3343F12E5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BehrensTech.DessertStore.Web.Tests", "..\BehrensTech.DessertStore.Web.Tests\BehrensTech.DessertStore.Web.Tests.csproj", "{45624FDE-6701-47A4-875A-AA3343F12E5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -74,3 +74,13 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.product img {
+    width: 215px;
+}
+
+.product {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: beige;
+}
