@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BehrensTech.DessertStore.Data\BehrensTech.DessertStore.Data.csproj" />
+  </ItemGroup>
+
 </Project>

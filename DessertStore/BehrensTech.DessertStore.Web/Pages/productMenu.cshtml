@@ -1,0 +1,17 @@
+﻿@page
+@model BehrensTech.DessertStore.Web.Pages.productMenuModel
+@{
+    <div class="container">
+        <div class="row">
+            @foreach (var product in Model.Products)
+            {
+            <div class="product col-md-4">
+                <img src="~/images/@product.ImageName" />
+                <h2>@product.Title</h2>
+                <p>@product.Description</p>
+                <span class="price">@product.Price</span>
+            </div>
+            }
+        </div>
+    </div>
+}
